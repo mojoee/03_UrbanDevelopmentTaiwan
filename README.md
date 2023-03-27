@@ -4,6 +4,11 @@
 scraped data from JOIN, Etaiwan, 
 
 
+## Questions about dataset
+* difference between submission and publication date
+* how does the threshold get determined?
+* What does a threshold of 0 mean?
+
 ## Questions for DEA
 
 * How did the pariticpation change over the years?
@@ -17,6 +22,10 @@ scraped data from JOIN, Etaiwan,
 ## Method
 * explore data with pandas
 * embedd the proposals with ChatGPT
+
+## Todos
+* DEA --> 1st draft
+* embedd the text into embedding space
 
 
 ## Demand
