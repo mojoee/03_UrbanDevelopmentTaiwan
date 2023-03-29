@@ -25,7 +25,10 @@ scraped data from JOIN, Etaiwan,
 
 ## Todos
 * DEA --> 1st draft
-* embedd the text into embedding space
+* embedd the text into embedding space --> done
+* find clusters for the embeddings
+* are other embeddings better?
+* get some feedback and see where we can go
 
 
 ## Demand
