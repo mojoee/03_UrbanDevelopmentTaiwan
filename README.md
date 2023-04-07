@@ -1,8 +1,18 @@
 # JOIN
 
 ## Datsets
-scraped data from JOIN, Etaiwan, 
+scraped data from JOIN, IVoting
 
+## Definitions
+
+Deliberation Platforms: E-Petition
+
+
+## Paper
+
+* assessing the e-petitioning 
+* how many proposals did make it through
+* talk to responsibles did
 
 ## Questions about dataset
 * difference between submission and publication date
@@ -17,6 +27,7 @@ scraped data from JOIN, Etaiwan,
 * Filter the transport issues from JOIN
 * Was waren denn die TOP 10 in JOIN?
 * Deutschen Fussballplatz? Sport anliegen?
+* What categories are adressed? Clusters?
 
 
 ## Method
