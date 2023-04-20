@@ -7,5 +7,3 @@ data = pd.read_csv('data.csv')
 
 def createEmbedding(text):
     pass
-
-

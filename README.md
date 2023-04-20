@@ -11,8 +11,8 @@ Deliberation Platforms: E-Petition
 ## Paper
 
 * assessing the e-petitioning 
-* how many proposals did make it through
-* talk to responsibles did
+* how many proposals did make it through?
+* talk to what responsibles did
 
 ## Questions about dataset
 * difference between submission and publication date
@@ -40,9 +40,20 @@ Deliberation Platforms: E-Petition
 * find clusters for the embeddings
 * are other embeddings better?
 * get some feedback and see where we can go
+* labels for the dataset
 
 
 ## Demand
 
 
 ## Paper Abgabe
+
+
+## Sources 
+
+* The performance of BERT as data representation of text clustering, Subaki et al.
+* [Medium Article](https://towardsdatascience.com/a-friendly-introduction-to-text-clustering-fa996bcefd04)
+* [Latent semantic Analysis](https://en.wikipedia.org/wiki/Latent_semantic_analysis)
+* [Python LSA](https://www.datacamp.com/tutorial/discovering-hidden-topics-python)
+
+
