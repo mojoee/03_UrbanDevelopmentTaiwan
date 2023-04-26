@@ -7,6 +7,10 @@ scraped data from JOIN, IVoting
 
 Deliberation Platforms: E-Petition
 
+## Results during analysis
+
+* DBSCAN could not find any clusters, only noise. Might be due to high dimensionality of the data
+
 
 ## Paper
 
@@ -55,5 +59,7 @@ Deliberation Platforms: E-Petition
 * [Medium Article](https://towardsdatascience.com/a-friendly-introduction-to-text-clustering-fa996bcefd04)
 * [Latent semantic Analysis](https://en.wikipedia.org/wiki/Latent_semantic_analysis)
 * [Python LSA](https://www.datacamp.com/tutorial/discovering-hidden-topics-python)
+* [LDA](https://towardsdatascience.com/a-friendly-introduction-to-text-clustering-fa996bcefd04)
+
 
 
