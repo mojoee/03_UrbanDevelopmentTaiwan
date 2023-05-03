@@ -22,6 +22,7 @@ Deliberation Platforms: E-Petition
 * difference between submission and publication date
 * how does the threshold get determined?
 * What does a threshold of 0 mean?
+* How many travel-related proposals did make it?
 
 ## Questions for DEA
 
