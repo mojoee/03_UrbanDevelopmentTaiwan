@@ -19,6 +19,7 @@ Deliberation Platforms: E-Petition
 * talk to what responsibles did
 
 ## Questions about dataset
+
 * difference between submission and publication date
 * how does the threshold get determined?
 * What does a threshold of 0 mean?
@@ -53,12 +54,16 @@ Deliberation Platforms: E-Petition
 * are other embeddings better?
 * get some feedback and see where we can go
 * labels for the dataset
+* use translations of the text to be able to verify the results
+* Sankey diagram
 
 
 ## Demand
 
 
 ## Paper Abgabe
+
+The paper is due on 1st July for the icdm.
 
 
 ## Time frame
