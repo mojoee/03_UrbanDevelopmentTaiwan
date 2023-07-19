@@ -4,18 +4,21 @@ version = "0.1.0"
 description = ""
 authors = ["mojoee <47809126+mojoee@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{include = "03_urbandevelopmenttaiwan"}]
+packages = [{include = "03_urbandevelopmenttaiwan"},
+    {include = "urbandev"},
+    ]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 gensim = "^4.3.1"
 ipykernel = "^6.22.0"
-pandas = "^2.0.0"
+pandas = "^2.0.3"
 nltk = "^3.8.1"
 matplotlib = "^3.7.1"
 openpyxl = "^3.1.2"
 jieba = "^0.42.1"
 tcsp = "^0.0.9"
+googletrans = "3.1.0a0"
 
 
 [build-system]

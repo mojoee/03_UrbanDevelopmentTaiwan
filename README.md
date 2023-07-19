@@ -57,6 +57,10 @@ Deliberation Platforms: E-Petition
 * use translations of the text to be able to verify the results
 * Sankey diagram
 
+## Research Questions
+
+* How do translations change embeddings?
+
 
 ## Demand
 
