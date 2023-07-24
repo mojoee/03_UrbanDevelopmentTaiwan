@@ -25,6 +25,6 @@ if __name__ == "__main__":
             print(row["proposal"])
             df.at[index, "proposal"] = "沒有提供上下文"
     df["proposalEN"] = df["proposal"].apply(lambda x: translate_text(x))
-    #df["titleEN"] = df["title"].apply(lambda x: translate_text(x))
+    df["titleEN"] = df["title"].apply(lambda x: translate_text(x))
     print(df.head())
     save_data(df)
