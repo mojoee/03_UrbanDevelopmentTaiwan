@@ -1,5 +1,5 @@
 from googletrans import Translator
-from urbandev.utils import load_data, save_data
+from urbandev.utils import load_data_excel, save_data
 import re
 
 def clean_proposals(df):
@@ -14,7 +14,7 @@ def translate_text(text):
     return translation
 
 if __name__ == "__main__":
-    df = load_data("./data/JOINProposals.xlsx")
+    df = load_data_excel("./data/JOINProposals.xlsx")
     translator = Translator()
     #df["titleEN"] = df["title"].apply(lambda x: translator.translate(x, src="zh-tw", dest="en").text)
     
