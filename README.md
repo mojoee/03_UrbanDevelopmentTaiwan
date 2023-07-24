@@ -56,6 +56,10 @@ Deliberation Platforms: E-Petition
 * labels for the dataset
 * use translations of the text to be able to verify the results
 * Sankey diagram
+* refine stopwords for english
+* compare english and chinese
+* create groundtruth 
+* implement a labeling pipeline with LLM models
 
 ## Research Questions
 
