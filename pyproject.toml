@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["mojoee <47809126+mojoee@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{include = "03_urbandevelopmenttaiwan"},
+packages = [
     {include = "urbandev"},
     ]
 

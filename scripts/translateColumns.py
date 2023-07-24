@@ -1,27 +1,30 @@
 from googletrans import Translator
-#from urbandev.utils import load_data
-import pandas as pd
-import os
+from urbandev.utils import load_data, save_data
+import re
 
-def load_data(path="./data/JOINProposals.xlsx"):
-    df = pd.read_excel(path)
-    translations = {'Unnamed: 0':"Index", 'publishDate':"publishDate", '網址':"url", '標題':"title", 
-    '提議內容':"proposal",  '利益與影響':"benefits&impact", '附議數量':"#Votes", '附議門檻':"MinVotesNecessary", 
-    '提送日期':"SubmissionDate", '關注數量':"Followers", '留言數量':"Messages", 'googleAnalytics':"GA",'提議者':"proposer" }
-    df = df.rename(columns=translations)
-    return df
+def clean_proposals(df):
+    pass
 
-
-def save_data(df, path="./data/translatedJoinProposals.csv"):
-    destination, file = os.path.split(path)
-    os.makedirs(destination, exist_ok=True)
-    df.to_csv(path) 
-
+def translate_text(text):
+    try:
+        translation = translator.translate(text, src="zh-tw", dest="en").text
+    except Exception as e:
+        print("Exception occured:", e)
+        translation = "Could not translate"
+    return translation
 
 if __name__ == "__main__":
     df = load_data("./data/JOINProposals.xlsx")
     translator = Translator()
-    df["titleEN"] = df["title"][:10].apply(lambda x: translator.translate(x, src="zh-tw", dest="en").text)
-    df["proposalEN"] = df["proposal"][:10].apply(lambda x: translator.translate(x, src="zh-tw", dest="en").text)
+    #df["titleEN"] = df["title"].apply(lambda x: translator.translate(x, src="zh-tw", dest="en").text)
+    
+    df["proposal"] = df["proposal"].apply(lambda x: str(x).replace('\n', ''))
+    df["proposal"] = df["proposal"].apply(lambda x: str(x).replace('\xa0', ''))
+    for index, row in df.iterrows():
+        if not re.findall(r'[\u4e00-\u9fff]+', str(row["proposal"])):
+            print(row["proposal"])
+            df.at[index, "proposal"] = "沒有提供上下文"
+    df["proposalEN"] = df["proposal"].apply(lambda x: translate_text(x))
+    #df["titleEN"] = df["title"].apply(lambda x: translate_text(x))
     print(df.head())
     save_data(df)
