@@ -66,6 +66,9 @@ Deliberation Platforms: E-Petition
 - [] tune this notebook with a few more tricks from the source
 - [] is there a difference between using abstracts and titles
 - [] tryout the method that Chad used, e.g. using text embeddings, kmeans, clustering, cosine similarity
+- [] compare the topics created in chinese and english
+- [] checkout kaggle approaches https://www.kaggle.com/datasets/allen-institute-for-ai/CORD-19-research-challenge
+- [] do the analysis again with the just translated csv (...2)
 
 
 ## Research Questions
@@ -99,6 +102,10 @@ The paper is due on 1st July for the icdm.
 * [^2] http://svn.aksw.org/papers/2015/WSDM_Topic_Evaluation/public.pdf
 * https://notebook.community/bmabey/pyLDAvis/notebooks/pyLDAvis_overview
 * pyLDAvis [^3] for topic visualization
+* https://colab.research.google.com/drive/1naHywtKY1QUClKTXIOhjFLv0rUheHH4c?usp=sharing#scrollTo=CteSym6g1IgN
+* Research on CORD-19 dataset: https://namyalg.medium.com/how-many-topics-4b1095510d0e
+
+
 
 
 

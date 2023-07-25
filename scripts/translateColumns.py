@@ -16,7 +16,6 @@ def translate_text(text):
 if __name__ == "__main__":
     df = load_data_excel("./data/JOINProposals.xlsx")
     translator = Translator()
-    #df["titleEN"] = df["title"].apply(lambda x: translator.translate(x, src="zh-tw", dest="en").text)
     
     df["proposal"] = df["proposal"].apply(lambda x: str(x).replace('\n', ''))
     df["proposal"] = df["proposal"].apply(lambda x: str(x).replace('\xa0', ''))
@@ -27,4 +26,4 @@ if __name__ == "__main__":
     df["proposalEN"] = df["proposal"].apply(lambda x: translate_text(x))
     df["titleEN"] = df["title"].apply(lambda x: translate_text(x))
     print(df.head())
-    save_data(df)
+    save_data(df, path="./data/translatedJoinProposals2.csv")
