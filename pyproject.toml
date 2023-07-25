@@ -19,6 +19,8 @@ openpyxl = "^3.1.2"
 jieba = "^0.42.1"
 tcsp = "^0.0.9"
 googletrans = "3.1.0a0"
+pyldavis = "^3.4.1"
+wordcloud = "^1.9.2"
 
 
 [build-system]

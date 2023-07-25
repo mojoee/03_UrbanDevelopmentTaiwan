@@ -46,20 +46,27 @@ Deliberation Platforms: E-Petition
 ## Method
 * explore data with pandas
 * embedd the proposals with ChatGPT
+* evaluate the topic coherence [^2]
 
 ## Todos
-* DEA --> 1st draft
-* embedd the text into embedding space --> done
-* find clusters for the embeddings
-* are other embeddings better?
-* get some feedback and see where we can go
-* labels for the dataset
-* use translations of the text to be able to verify the results
-* Sankey diagram
-* refine stopwords for english
-* compare english and chinese
-* create groundtruth 
-* implement a labeling pipeline with LLM models
+- [x] DEA --> 1st draft
+- [] embedd the text into embedding space --> done
+- [x] find clusters for the embeddings
+- [] are other embeddings better?
+- [] get some feedback and see where we can go
+- [] labels for the dataset
+- [] use translations of the text to be able to verify the results
+- [] Sankey diagram
+- [x] refine stopwords for english
+- [] compare english and chinese
+- [] create groundtruth 
+- [] implement a labeling pipeline with LLM models
+- [x] implement the nice visualization with terms and intertopic distance
+- [] implement the word cloud for the given topics
+- [] tune this notebook with a few more tricks from the source
+- [] is there a difference between using abstracts and titles
+- [] tryout the method that Chad used, e.g. using text embeddings, kmeans, clustering, cosine similarity
+
 
 ## Research Questions
 
@@ -76,6 +83,10 @@ The paper is due on 1st July for the icdm.
 
 ## Time frame
 
+## Frameworks used
+
+* pyLDAvis [^3] for topic visualization
+
 
 ## Sources 
 
@@ -85,6 +96,11 @@ The paper is due on 1st July for the icdm.
 * [Python LSA](https://www.datacamp.com/tutorial/discovering-hidden-topics-python)
 * [LDA](https://towardsdatascience.com/a-friendly-introduction-to-text-clustering-fa996bcefd04)
 * [^1] Lapesa, Gabriella, et al. "Analysis of Political Debates through Newspaper Reports: Methods and Outcomes." Datenbank-Spektrum 20 (2020): 143-153.
+* [^2] http://svn.aksw.org/papers/2015/WSDM_Topic_Evaluation/public.pdf
+* https://notebook.community/bmabey/pyLDAvis/notebooks/pyLDAvis_overview
+* pyLDAvis [^3] for topic visualization
+
+
 
 
 
