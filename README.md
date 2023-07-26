@@ -69,6 +69,11 @@ Deliberation Platforms: E-Petition
 - [] compare the topics created in chinese and english
 - [] checkout kaggle approaches https://www.kaggle.com/datasets/allen-institute-for-ai/CORD-19-research-challenge
 - [] do the analysis again with the just translated csv (...2)
+- [] cluster the subgroups
+- [] nicht informative woerter raus
+- [] sind die subgruppen vom Verkehr in den passed proposals dabei
+- [] flow-diagram vom Prozess
+- [] sind die outcomes in uebersetzung wie outcomes vom englischen
 
 
 ## Research Questions
