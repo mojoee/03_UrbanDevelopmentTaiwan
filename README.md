@@ -18,6 +18,16 @@ Deliberation Platforms: E-Petition
 * how many proposals did make it through?
 * talk to what responsibles did
 
+# RQ
+
+* wie effizieint/hilfreich ist die e-participation platform in Taiwan (IVOTE, JOIN)
+* Zeitrahmen, wie hat sich politisch Entwicklung auf E-Platformen ausgewirkt? Korreliert?
+* gibt es diese bestimmte personen groesseren Einfluss's auf der Plattform?
+
+eventuell in Diskussion
+* wie clustert man sowas hilfreich? --> Bias der Methode ?
+* wie sind die Ergebnisse unterschiedlich von der Uebersetzung? Was sind die Artefakte von Uebersetzung? --> Bias der Methode ?
+
 ## Questions about dataset
 
 * difference between submission and publication date
@@ -72,8 +82,16 @@ Deliberation Platforms: E-Petition
 - [] cluster the subgroups
 - [] nicht informative woerter raus
 - [] sind die subgruppen vom Verkehr in den passed proposals dabei
-- [] flow-diagram vom Prozess
+- [] flow-diagram vom Prozess (Datenanalyse und allgemein)
 - [] sind die outcomes in uebersetzung wie outcomes vom englischen
+- [] gibt es bestimmte meinungstraeger? Welche Leute sind denn besonders aktiv?
+- [] tfidf-bow methode ausprobieren
+- [] woerter rausfiltern, stopwords
+- [] wie kann man artefake darstellen? Aehnlich wie IKON
+- [] fuzzy approach
+- [] can we find pedestrian hell by looking at proposals to pedestrians in 2018?
+- [] alle proposals angucken (JOIN + IVOTE), welche Themen sind am meisten thematisiert?
+- [] Klassifizierung 0-Shot - ERNIE 
 
 
 ## Research Questions
