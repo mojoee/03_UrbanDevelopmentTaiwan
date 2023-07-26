@@ -24,6 +24,7 @@ Deliberation Platforms: E-Petition
 * Zeitrahmen, wie hat sich politisch Entwicklung auf E-Platformen ausgewirkt? Korreliert?
 * gibt es diese bestimmte personen groesseren Einfluss's auf der Plattform?
 
+
 eventuell in Diskussion
 * wie clustert man sowas hilfreich? --> Bias der Methode ?
 * wie sind die Ergebnisse unterschiedlich von der Uebersetzung? Was sind die Artefakte von Uebersetzung? --> Bias der Methode ?
@@ -78,16 +79,16 @@ eventuell in Diskussion
 - [] tryout the method that Chad used, e.g. using text embeddings, kmeans, clustering, cosine similarity
 - [] compare the topics created in chinese and english
 - [] checkout kaggle approaches https://www.kaggle.com/datasets/allen-institute-for-ai/CORD-19-research-challenge
-- [] do the analysis again with the just translated csv (...2)
+- [x] do the analysis again with the just translated csv (...2)
 - [] cluster the subgroups
-- [] nicht informative woerter raus
+- [] nicht informative woerter raus--> funktioniert nicht mit dem set, nation ist immer noch drin
 - [] sind die subgruppen vom Verkehr in den passed proposals dabei
 - [] flow-diagram vom Prozess (Datenanalyse und allgemein)
 - [] sind die outcomes in uebersetzung wie outcomes vom englischen
 - [] gibt es bestimmte meinungstraeger? Welche Leute sind denn besonders aktiv?
-- [] tfidf-bow methode ausprobieren
+- [x] tfidf-bow methode ausprobieren
 - [] woerter rausfiltern, stopwords
-- [] wie kann man artefake darstellen? Aehnlich wie IKON
+- [] wie kann man artefakte darstellen? Aehnlich wie IKON
 - [] fuzzy approach
 - [] can we find pedestrian hell by looking at proposals to pedestrians in 2018?
 - [] alle proposals angucken (JOIN + IVOTE), welche Themen sind am meisten thematisiert?
