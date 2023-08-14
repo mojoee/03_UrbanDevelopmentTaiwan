@@ -2,3 +2,4 @@ venv/
 .venv/
 papers/
 *.pyc
+.env

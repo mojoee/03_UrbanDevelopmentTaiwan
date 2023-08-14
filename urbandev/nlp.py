@@ -1,18 +1,19 @@
 import torch
 from torch.nn import functional as F
 from transformers import pipeline
-from transformers import AutoTokenizer
-
+from transformers import AutoTokenizer, AutoModelForTokenClassification
 
 torch.set_default_dtype(torch.bfloat16)
 
+access_token = "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"
 task = "zero-shot-classification"
-model = "meta-llama/Llama-2-7b-hf"
-tokenizer = AutoTokenizer.from_pretrained(model)
+modelName = "meta-llama/Llama-2-7b-hf"
+#model = AutoModelForTokenClassification.from_pretrained(modelName)
+tokenizer = AutoTokenizer.from_pretrained(modelName, token=access_token, device='cuda')
 
 #tokenizer = GPT2Tokenizer.from_pretrained(model_version)
 #model = GPT2LMHeadModel.from_pretrained(model_version)
-classifier = pipeline(task, model=model)
+classifier = pipeline(task, model=modelName, token=access_token)
 
 def check_tokens_in_dict(labels, tokenizer):
     c = 0
@@ -45,5 +46,5 @@ def classify_text(sentence, labels, tokenizer, model):
 
 def zero_shot_classification(text, labels):
 
-    result_travel = classifier(text, labels, torch_dtype=torch.float16, device=0, eos_token_id=tokenizer.eos_token_id)
+    result_travel = classifier(text, labels, torch_dtype=torch.float16, device="auto", eos_token_id=tokenizer.eos_token_id)
     return result_travel
