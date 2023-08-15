@@ -130,6 +130,8 @@ The paper is due on 1st July for the icdm.
 * https://colab.research.google.com/drive/1naHywtKY1QUClKTXIOhjFLv0rUheHH4c?usp=sharing#scrollTo=CteSym6g1IgN
 * Research on CORD-19 dataset: https://namyalg.medium.com/how-many-topics-4b1095510d0e
 * Blog on using HF for 0-shot: https://joeddav.github.io/blog/2020/05/29/ZSL.html
+* BERTopic: helpful tool for topic modeling https://maartengr.github.io/BERTopic/getting_started/guided/guided.html
+
 
 
 
