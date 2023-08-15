@@ -163,3 +163,5 @@ venv/
 .venv/
 papers/
 __pycache__/
+*.pyc
+.env

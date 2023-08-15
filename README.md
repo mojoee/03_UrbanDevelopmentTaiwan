@@ -93,6 +93,7 @@ eventuell in Diskussion
 - [] can we find pedestrian hell by looking at proposals to pedestrians in 2018?
 - [] alle proposals angucken (JOIN + IVOTE), welche Themen sind am meisten thematisiert?
 - [] Klassifizierung 0-Shot - ERNIE 
+- [] checkout BERTopic
 
 
 ## Research Questions
