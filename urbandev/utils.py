@@ -1,5 +1,8 @@
+from typing import Literal
 import pandas as pd
 import os
+from sklearn.utils import Bunch
+from datasets import Dataset, Features, Value, ClassLabel
 
 def load_data_excel(path="./data/JOINProposals.xlsx"):
     df = pd.read_excel(path)
@@ -28,4 +31,21 @@ def save_data(df, path="./data/translatedJoinProposals.csv"):
 def clean_data(df):
     return df
 
+def load_dataset(sources=['JOIN Proposals', 'iVoting Proposals'], text_columns=['title', 'proposal'], language='en', type: Literal["sklearn", "huggingface"]='sklearn'):
+    all_data = pd.read_excel('data/JOIN_iVoting_Proposals_categorized.xlsx')
+    all_data['label'] = all_data['Category']
+    training_dataset = pd.DataFrame(data={
+        'text': all_data[[column + '_' + language for column in text_columns]].apply(lambda row: '_'.join(row.values.astype(str)), axis=1),
+        'label': all_data['Category'],
+        'date': all_data['date']
+    })
+    # check for int in text column
+    if type == 'sklearn':
+        return training_dataset['text'].values, training_dataset['label'].astype('category').cat.codes, training_dataset['date'].values
+    elif type == 'huggingface':
+        return Dataset.from_pandas(training_dataset, features=Features({'text': Value('string'), 'label': ClassLabel(names=all_data['Category'].unique().tolist())}))
+    else:
+        raise ValueError('style must be either sklearn or huggingface')
+
+load_dataset(type='sklearn')
 
