@@ -4,7 +4,7 @@ import os
 from sklearn.utils import Bunch
 from datasets import Dataset, Features, Value, ClassLabel
 
-def load_data_excel(path="./data/JOINProposals.xlsx"):
+def load_data_excel(path="./data/JOIN_iVoting_Proposals_categorized.xlsx"):
     df = pd.read_excel(path)
     translations = {'Unnamed: 0':"Index", 'publishDate':"publishDate", '網址':"url", '標題':"title", 
     '提議內容':"proposal",  '利益與影響':"benefits&impact", '附議數量':"#Votes", '附議門檻':"MinVotesNecessary", 
@@ -31,7 +31,7 @@ def save_data(df, path="./data/translatedJoinProposals.csv"):
 def clean_data(df):
     return df
 
-def load_dataset(sources=['JOIN Proposals', 'iVoting Proposals'], text_columns=['title', 'proposal'], language='en', type: Literal["sklearn", "huggingface"]='sklearn'):
+def load_dataset(sources=['JOIN Proposals', 'iVoting Proposals'], text_columns=['title', 'proposal'], language='en', type: Literal["sklearn", "huggingface", "pandas"]='sklearn'):
     all_data = pd.read_excel('data/JOIN_iVoting_Proposals_categorized.xlsx')
     all_data['label'] = all_data['Category']
     training_dataset = pd.DataFrame(data={
@@ -44,8 +44,10 @@ def load_dataset(sources=['JOIN Proposals', 'iVoting Proposals'], text_columns=[
         return training_dataset['text'].values, training_dataset['label'].astype('category').cat.codes, training_dataset['date'].values
     elif type == 'huggingface':
         return Dataset.from_pandas(training_dataset, features=Features({'text': Value('string'), 'label': ClassLabel(names=all_data['Category'].unique().tolist())}))
+    elif type == 'pandas':
+        return all_data
     else:
-        raise ValueError('style must be either sklearn or huggingface')
+        raise ValueError('style must be either sklearn, huggingface or pandas')
 
 load_dataset(type='sklearn')
 
