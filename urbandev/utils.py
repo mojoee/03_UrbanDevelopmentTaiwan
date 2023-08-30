@@ -31,9 +31,13 @@ def save_data(df, path="./data/translatedJoinProposals.csv"):
 def clean_data(df):
     return df
 
-def load_dataset(sources=['JOIN Proposals', 'iVoting Proposals'], text_columns=['title', 'proposal'], language='en', type: Literal["sklearn", "huggingface", "pandas"]='sklearn'):
-    all_data = pd.read_excel('data/JOIN_iVoting_Proposals_categorized.xlsx')
+def load_dataset(source: Literal['JOIN', 'iVoting']="JOIN", text_columns=['title', 'proposal'], language='en', type: Literal["sklearn", "huggingface", "pandas"]='sklearn'):
+    sheets = {"JOIN": 0, "iVoting": 1}
+    header = {"JOIN": 0, "iVoting": 1}
+    all_data = pd.read_excel('data/JOIN_iVoting_Proposals_categorized.xlsx', sheet_name=sheets[source], header=header[source])
     all_data['label'] = all_data['Category']
+    if source == 'iVoting':
+        all_data['date'] = pd.to_datetime(all_data['date'].apply(lambda x: x.split('-')[0]).apply(lambda x: x[:4] + '-' + x[4:6] + "-" + x[6:8] +" 00:00:00"))
     training_dataset = pd.DataFrame(data={
         'text': all_data[[column + '_' + language for column in text_columns]].apply(lambda row: '_'.join(row.values.astype(str)), axis=1),
         'label': all_data['Category'],
@@ -49,5 +53,5 @@ def load_dataset(sources=['JOIN Proposals', 'iVoting Proposals'], text_columns=[
     else:
         raise ValueError('style must be either sklearn, huggingface or pandas')
 
-load_dataset(type='sklearn')
+load_dataset(source="iVoting", type='sklearn')
 
