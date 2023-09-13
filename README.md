@@ -61,9 +61,9 @@ eventuell in Diskussion
 
 ## Todos
 - [x] DEA --> 1st draft
-- [] embedd the text into embedding space --> done
+- [x] embedd the text into embedding space --> done
 - [x] find clusters for the embeddings
-- [] are other embeddings better?
+- [] are other embeddings better? --> BGEE-large works great, maybe can compare
 - [] get some feedback and see where we can go
 - [] labels for the dataset
 - [] use translations of the text to be able to verify the results
