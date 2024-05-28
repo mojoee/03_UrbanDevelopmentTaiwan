@@ -64,23 +64,23 @@ eventuell in Diskussion
 - [x] embedd the text into embedding space --> done
 - [x] find clusters for the embeddings
 - [] are other embeddings better? --> BGEE-large works great, maybe can compare
-- [] get some feedback and see where we can go
-- [] labels for the dataset
-- [] use translations of the text to be able to verify the results
+- [x] get some feedback and see where we can go
+- [x] labels for the dataset
+- [x] use translations of the text to be able to verify the results
 - [] Sankey diagram
 - [x] refine stopwords for english
 - [] compare english and chinese
 - [] create groundtruth 
 - [] implement a labeling pipeline with LLM models
 - [x] implement the nice visualization with terms and intertopic distance
-- [] implement the word cloud for the given topics
-- [] tune this notebook with a few more tricks from the source
+- [x] implement the word cloud for the given topics
+- [x] tune this notebook with a few more tricks from the source
 - [] is there a difference between using abstracts and titles
-- [] tryout the method that Chad used, e.g. using text embeddings, kmeans, clustering, cosine similarity
-- [] compare the topics created in chinese and english
+- [] tryout the method that Chad used, e.g. using text embeddings, kmeans, clustering, cosine similarity 
+- [x] compare the topics created in chinese and english
 - [] checkout kaggle approaches https://www.kaggle.com/datasets/allen-institute-for-ai/CORD-19-research-challenge
 - [x] do the analysis again with the just translated csv (...2)
-- [] cluster the subgroups
+- [x] cluster the subgroups
 - [] nicht informative woerter raus--> funktioniert nicht mit dem set, nation ist immer noch drin
 - [] sind die subgruppen vom Verkehr in den passed proposals dabei
 - [] flow-diagram vom Prozess (Datenanalyse und allgemein)
@@ -105,8 +105,6 @@ eventuell in Diskussion
 
 
 ## Paper Abgabe
-
-The paper is due on 1st July for the icdm.
 
 
 ## Time frame

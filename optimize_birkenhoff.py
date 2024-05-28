@@ -2,10 +2,10 @@ import gurobipy as gp
 from gurobipy import GRB
 import copy
 import numpy as np
-
+import random
 
 n = 14000
-m = 200
+m = 10
 # random integer matrix
 np.random.seed(1)
 A = np.random.randint(0, 100, size=(n, m), dtype=np.int8)
@@ -15,11 +15,7 @@ B = copy.deepcopy(A)
 P_hat = np.eye(m)
 np.random.shuffle(P_hat)
 
-
-
-
 # permutate columns of B
-import random
 B = B @ P_hat
 
 # add small random elta to B
